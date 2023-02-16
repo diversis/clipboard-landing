@@ -1,0 +1,110 @@
+/* Set core root defaults */
+:root {
+  font-family: 'Bai Jamjuree', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+
+  color-scheme: light dark;
+  background-color: rgb(255, 255, 255);
+  color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; /* for iOS Safari */
+  text-size-adjust: 100%; /* for other mobile browsers */
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* styles */
+
+header {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+    url(/images/bg-header-mobile/150.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 256px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-mobile/256.webp);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-mobile/375.webp);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-mobile/480.webp);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-mobile/640.webp);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-desktop/768.webp);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-desktop/1024.webp);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-desktop/1200.webp);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)),
+      url(/images/bg-header-desktop/1440.webp);
+  }
+}

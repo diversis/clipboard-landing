@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body w="screen" min="h-screen">
+    <header h="10em"></header>
+    <div id="app"></div>
+    <!-- Hero section -->
+    <div h="30em" class="flex flex-col container" m="x-auto" items="center" w="full" items="center">
+      <div>
+        <picture>
+          <svg width="125" height="125"><use href="#logo" color="black" /></svg>
+        </picture>
+      </div>
+      <div class="flex flex-col" gap="4" p="x-6 y-4">
+        <article class="flex flex-col">
+          <h1 text="6xl center" font="semibold" p="b-8">A history of everything you copy</h1>
+          <p text="xl center" p="b-8">
+            Clipboard allows you to track and organize everything you copy.Instantly access your
+            clipboard on all your devices.
+          </p>
+        </article>
+        <section>
+          <button
+            p="x-6 y-2"
+            class="flex flex-row"
+            gap="4"
+            bg="purple"
+            rounded="xl"
+            text="2xl"
+            items="center"
+            font="bold"
+            z="200"
+          >
+            GET SOME
+            <b class="i-mdi-arrow-right-bold-outline" text="2xl white"></b>
+          </button>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <g id="logo" stroke="#26BBA4" stroke-width="10" fill="none" fill-rule="evenodd">
+        <title>Logo</title>
+        <circle cx="62.5" cy="62.5" r="57.5" />
+        <path
+          d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
+          stroke-linecap="round"
+        />
+      </g>
+    </defs>
+  </svg>
+</html>
