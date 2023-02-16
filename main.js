@@ -2,7 +2,3 @@
 import "@unocss/reset/tailwind.css";
 import "uno.css";
 import "./style.css";
-
-document.querySelector("#app").innerHTML = `
-
-`;

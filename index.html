@@ -1,59 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body w="screen" min="h-screen">
-    <header h="10em"></header>
-    <div id="app"></div>
-    <!-- Hero section -->
-    <div h="30em" class="flex flex-col container" m="x-auto" items="center" w="full" items="center">
-      <div>
-        <picture>
-          <svg width="125" height="125"><use href="#logo" color="black" /></svg>
-        </picture>
-      </div>
-      <div class="flex flex-col" gap="4" p="x-6 y-4">
-        <article class="flex flex-col">
-          <h1 text="6xl center" font="semibold" p="b-8">A history of everything you copy</h1>
-          <p text="xl center" p="b-8">
-            Clipboard allows you to track and organize everything you copy.Instantly access your
-            clipboard on all your devices.
-          </p>
-        </article>
-        <section>
-          <button
-            p="x-6 y-2"
-            class="flex flex-row"
-            gap="4"
-            bg="purple"
-            rounded="xl"
-            text="2xl"
-            items="center"
-            font="bold"
-            z="200"
-          >
-            GET SOME
-            <b class="i-mdi-arrow-right-bold-outline" text="2xl white"></b>
-          </button>
-        </section>
-      </div>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
-  <svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <g id="logo" stroke="#26BBA4" stroke-width="10" fill="none" fill-rule="evenodd">
-        <title>Logo</title>
-        <circle cx="62.5" cy="62.5" r="57.5" />
-        <path
-          d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
-          stroke-linecap="round"
-        />
-      </g>
-    </defs>
-  </svg>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clipboard Landing Page</title>
+    </head>
+    <body w="screen" min="h-screen">
+        <a
+            href="#content"
+            class="-translate-y-full focus:translate-y-0 transition-transform"
+            text="lg xl:xl black"
+            absolute
+            top="0"
+            left="0"
+            p="x-8 y-2"
+            z="[9000]"
+        >
+            Skip to content
+        </a>
+        <header h="6em xl:8em" relative overflow="visible">
+            <div
+                class="bg-header"
+                absolute
+                h="8em xl:[clamp(10em,25vh,25em)]"
+                w="100vw"
+                z="-10"
+            ></div>
+        </header>
+        <div id="app"></div>
+        <main
+            id="content"
+            class="grid grid-cols-1"
+            gap="20 xl:30"
+            p="x-6 xl:x-8 b-20 xl:b-40"
+        >
+            <!-- Hero section -->
+            <div
+                h="full"
+                class="flex flex-col container"
+                m="x-auto"
+                items="center"
+                w="full"
+                items="center"
+                gap="4 xl:10"
+            >
+                <div>
+                    <picture>
+                        <svg
+                            viewBox="0 0 125 125"
+                            w="[clamp(1em,25vw,8em)]"
+                            h="min"
+                            grid
+                            place="items-center"
+                        >
+                            <use href="#logo" />
+                        </svg>
+                    </picture>
+                </div>
+                <div class="flex flex-col" gap="4" p="x-0 y-4">
+                    <article class="flex flex-col" items="center">
+                        <h1
+                            text="3xl xl:6xl center dark-grayish-blue"
+                            font="semibold"
+                            p="b-8"
+                        >
+                            A history of everything you copy
+                        </h1>
+                        <p
+                            text="xl:2xl xl center grayish-blue"
+                            p="b-8"
+                            max="w-[52ch]"
+                        >
+                            Clipboard allows you to track and organize
+                            everything you copy. Instantly access your clipboard
+                            on all your devices.
+                        </p>
+                    </article>
+                    <!-- CTA -->
+                    <section
+                        class="flex flex-col xl:flex-row"
+                        justify="center"
+                        gap="4"
+                        m="xl:t-4"
+                    >
+                        <button
+                            class="btn hover:bg-strong-cyan-50"
+                            bg="strong-cyan "
+                        >
+                            Dowload for iOS
+                        </button>
+
+                        <button
+                            class="btn hover:bg-light-blue-50"
+                            bg="light-blue"
+                        >
+                            Dowload for Mac
+                        </button>
+                    </section>
+                </div>
+            </div>
+            <!-- Desktop -->
+            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4">
+                <article class="flex flex-col container mx-auto" items="center">
+                    <h2 class="h2">Keep track of your snippets</h2>
+                    <p
+                        text="lg xl:xl center grayish-blue"
+                        p="b-8"
+                        max="w-[62ch]"
+                    >
+                        Clipboard instantly stores any item you copy in the
+                        cloud, meaning you can access your snippets immediately
+                        on all your devices. Our Mac and iOS apps will help you
+                        organize everything
+                    </p>
+                </article>
+                <div
+                    class="flex flex-col xl:grid xl:grid-cols-2"
+                    m="x-auto xl:x-0"
+                >
+                    <div relative>
+                        <picture xl:absolute xl:left="-10%" overflow="crop">
+                            <img
+                                w="100% xl:110%"
+                                srcset="
+                                    /images/image-computer/150.webp   150w,
+                                    /images/image-computer/256.webp   256w,
+                                    /images/image-computer/375.webp   375w,
+                                    /images/image-computer/480.webp   480w,
+                                    /images/image-computer/640.webp   640w,
+                                    /images/image-computer/768.webp   768w,
+                                    /images/image-computer/1024.webp 1024w,
+                                    /images/image-computer/1200.webp 1200w,
+                                    /images/image-computer/1440.webp 1440w
+                                "
+                                src="/images/image-computer/1024.webp"
+                                alt="Image Computer"
+                            />
+                        </picture>
+                    </div>
+                    <div p="t-20 xl:l-30 xl:y-20" m="x-auto xl:0">
+                        <ul
+                            class="flex flex-col"
+                            gap="8 xl:15"
+                            leading="8"
+                            max="w-[38ch]"
+                            text="center xl:left"
+                        >
+                            <li>
+                                <h3 class="h3">Quick Search</h3>
+                                <span text="grayish-blue  base xl:lg"
+                                    >Easily search your snippets by content,
+                                    category, web address, application and
+                                    more</span
+                                >
+                            </li>
+                            <li>
+                                <h3 class="h3">iCloud Sync</h3>
+                                <span text="grayish-blue  base xl:lg"
+                                    >Instantly saves and syncs snippets across
+                                    all your devices</span
+                                >
+                            </li>
+                            <li>
+                                <h3 class="h3">Complete History</h3>
+                                <span text="grayish-blue  base xl:lg"
+                                    >Retrieve any snippets from the frist moment
+                                    you started using the app</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Compatibility -->
+            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4">
+                <article class="flex flex-col container mx-auto" items="center">
+                    <h2 class="h2">Access Clipboard Anywhere</h2>
+                    <p
+                        text="lg xl:xl center grayish-blue"
+                        p="b-8"
+                        max="w-[62ch]"
+                    >
+                        Whether you're on the go, or at your computer, you can
+                        access all your Clipboard snippets in a few simple
+                        clicks
+                    </p>
+                </article>
+                <div grid items="center" m="x-auto xl:x-[10vw]">
+                    <div relative>
+                        <picture overflow="crop">
+                            <img
+                                srcset="
+                                    /images/image-devices/150.webp   150w,
+                                    /images/image-devices/256.webp   256w,
+                                    /images/image-devices/375.webp   375w,
+                                    /images/image-devices/480.webp   480w,
+                                    /images/image-devices/640.webp   640w,
+                                    /images/image-devices/768.webp   768w,
+                                    /images/image-devices/1024.webp 1024w,
+                                    /images/image-devices/1200.webp 1200w,
+                                    /images/image-devices/1440.webp 1440w
+                                "
+                                src="/images/image-devices/1024.webp"
+                                alt="Image devices"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <!-- Features -->
+            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4" w="full">
+                <article class="flex flex-col container mx-auto" items="center">
+                    <h2 class="h2">Supercharge your workflow</h2>
+                    <p
+                        text="lg xl:xl center grayish-blue"
+                        p="b-8"
+                        max="w-[62ch]"
+                    >
+                        We've got the tools to boost your productivity
+                    </p>
+                </article>
+                <div
+                    class="flex flex-col xl:grid xl:grid-cols-3 container"
+                    gap="8 xl:15"
+                    leading="8"
+                    text="center"
+                    m="x-auto"
+                    justify="center"
+                    items="start"
+                    place="content-center"
+                >
+                    <div
+                        flex
+                        class="flex-col"
+                        max="w-[38ch]"
+                        justify="xl:self-center"
+                        items="center"
+                    >
+                        <picture
+                            w="10 xl:16"
+                            h="10 xl:16"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg w="10 xl:16" viewBox="0 0 43 40">
+                                <use href="#icon-blacklist" w="full" h="full" />
+                            </svg>
+                        </picture>
+                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                            Create blacklists
+                        </h3>
+                        <p text="grayish-blue  lg">
+                            Ensure sensitive information never makes its way to
+                            your clipboard by excluding certain sources
+                        </p>
+                    </div>
+                    <div
+                        flex
+                        class="flex-col"
+                        max="w-[38ch]"
+                        justify="xl:self-center"
+                        items="center"
+                    >
+                        <picture
+                            w="10 xl:16"
+                            h="10 xl:16"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg w="10 xl:16" viewBox="0 0 35 32">
+                                <use href="#icon-text" w="full" h="full" />
+                            </svg>
+                        </picture>
+                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                            Plain text snippets
+                        </h3>
+                        <p text="grayish-blue  lg">
+                            Remove unwanted formatting from copied text for a
+                            consistent look
+                        </p>
+                    </div>
+                    <div
+                        flex
+                        class="flex-col"
+                        max="w-[38ch]"
+                        justify="xl:self-center"
+                        items="center"
+                    >
+                        <picture
+                            w="10 xl:16"
+                            h="10 xl:16"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg w="10 xl:16" viewBox="0 0 50 32">
+                                <use href="#icon-preview" m="auto" />
+                            </svg>
+                        </picture>
+                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                            Sneak preview
+                        </h3>
+                        <p text="grayish-blue  lg">
+                            Quick preview of all snippets on your Clipboard for
+                            easy access
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Companies -->
+            <div
+                flex
+                class="flex-col xl:flex-row"
+                gap="10 xl:20"
+                justify="between"
+                p="xl:x-12 x-[clamp(2em,5vw,8em)] y-8 xl:y-0"
+                max="w-96"
+                m="x-auto"
+            >
+                <picture>
+                    <img
+                        srcset="
+                            /images/logo-google/150.webp   150w,
+                            /images/logo-google/256.webp   256w,
+                            /images/logo-google/375.webp   375w,
+                            /images/logo-google/480.webp   480w,
+                            /images/logo-google/640.webp   640w,
+                            /images/logo-google/768.webp   768w,
+                            /images/logo-google/1024.webp 1024w,
+                            /images/logo-google/1200.webp 1200w,
+                            /images/logo-google/1440.webp 1440w
+                        "
+                        src="/images/logo-google/1024.webp"
+                        alt="Google"
+                    />
+                </picture>
+                <picture>
+                    <img
+                        srcset="
+                            /images/logo-ibm/150.webp   150w,
+                            /images/logo-ibm/256.webp   256w,
+                            /images/logo-ibm/375.webp   375w,
+                            /images/logo-ibm/480.webp   480w,
+                            /images/logo-ibm/640.webp   640w,
+                            /images/logo-ibm/768.webp   768w,
+                            /images/logo-ibm/1024.webp 1024w,
+                            /images/logo-ibm/1200.webp 1200w,
+                            /images/logo-ibm/1440.webp 1440w
+                        "
+                        src="/images/logo-ibm/1024.webp"
+                        alt="IBM"
+                    />
+                </picture>
+                <picture>
+                    <img
+                        srcset="
+                            /images/logo-microsoft/150.webp   150w,
+                            /images/logo-microsoft/256.webp   256w,
+                            /images/logo-microsoft/375.webp   375w,
+                            /images/logo-microsoft/480.webp   480w,
+                            /images/logo-microsoft/640.webp   640w,
+                            /images/logo-microsoft/768.webp   768w,
+                            /images/logo-microsoft/1024.webp 1024w,
+                            /images/logo-microsoft/1200.webp 1200w,
+                            /images/logo-microsoft/1440.webp 1440w
+                        "
+                        src="/images/logo-microsoft/1024.webp"
+                        alt="Microsoft"
+                    />
+                </picture>
+                <picture>
+                    <img
+                        srcset="
+                            /images/logo-hp/150.webp   150w,
+                            /images/logo-hp/256.webp   256w,
+                            /images/logo-hp/375.webp   375w,
+                            /images/logo-hp/480.webp   480w,
+                            /images/logo-hp/640.webp   640w,
+                            /images/logo-hp/768.webp   768w,
+                            /images/logo-hp/1024.webp 1024w,
+                            /images/logo-hp/1200.webp 1200w,
+                            /images/logo-hp/1440.webp 1440w
+                        "
+                        src="/images/logo-hp/1024.webp"
+                        alt="HP"
+                    />
+                </picture>
+                <picture>
+                    <img
+                        srcset="
+                            /images/logo-vector-graphics/150.webp   150w,
+                            /images/logo-vector-graphics/256.webp   256w,
+                            /images/logo-vector-graphics/375.webp   375w,
+                            /images/logo-vector-graphics/480.webp   480w,
+                            /images/logo-vector-graphics/640.webp   640w,
+                            /images/logo-vector-graphics/768.webp   768w,
+                            /images/logo-vector-graphics/1024.webp 1024w,
+                            /images/logo-vector-graphics/1200.webp 1200w,
+                            /images/logo-vector-graphics/1440.webp 1440w
+                        "
+                        src="/images/logo-vector-graphics/1024.webp"
+                        alt="Vector Graphics"
+                    />
+                </picture>
+            </div>
+            <!-- Bottom  CTA-->
+            <div class="flex flex-col" gap="0 xl:4" p="x-0 y-4" w="full">
+                <article class="flex flex-col container mx-auto" items="center">
+                    <h2 class="h2">Supercharge your workflow</h2>
+                    <p
+                        text="lg xl:xl center grayish-blue"
+                        p="b-8"
+                        max="w-[62ch]"
+                    >
+                        We've got the tools to boost your productivity
+                    </p>
+                </article>
+                <section
+                    class="flex flex-col xl:flex-row"
+                    justify="center"
+                    gap="4"
+                    m="xl:t-4"
+                >
+                    <button
+                        class="btn hover:bg-strong-cyan-50"
+                        bg="strong-cyan "
+                    >
+                        Dowload for iOS
+                    </button>
+
+                    <button class="btn hover:bg-light-blue-50" bg="light-blue">
+                        Dowload for Mac
+                    </button>
+                </section>
+            </div>
+        </main>
+        <footer w="full" p="y-4 xl:y-8">
+            <div
+                flex
+                class="flex-col xl:flex-row container"
+                justify="between"
+                p="x-2 xl:x-20"
+                place="items-center"
+                gap="8"
+            >
+                <div>
+                    <picture>
+                        <svg
+                            w="12 "
+                            viewBox="0 0 125 125"
+                            grid
+                            place="items-center"
+                        >
+                            <use href="#logo" />
+                        </svg>
+                    </picture>
+                </div>
+                <div
+                    grid
+                    class="grid-cols-1 xl:grid-cols-3 xl:flex-grow"
+                    gap="8"
+                    p="xl:x-12"
+                >
+                    <div flex class="flex-col" gap="8">
+                        <a
+                            href="#"
+                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            >FAQs</a
+                        >
+
+                        <a
+                            href="#"
+                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            >Contact Us</a
+                        >
+                    </div>
+                    <div flex class="flex-col" gap="8">
+                        <a
+                            href="#"
+                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            >Privacy Policy</a
+                        >
+
+                        <a
+                            href="#"
+                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            >Press Kit</a
+                        >
+                    </div>
+                    <div flex class="flex-col" gap="8">
+                        <a
+                            href="#"
+                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            >Install Guide</a
+                        >
+                    </div>
+                </div>
+                <div
+                    flex
+                    class="flex-col xl:flex-row"
+                    gap="4 xl:8"
+                    p="0 xl:x-20"
+                >
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        class="fill-dark-grayish-blue hover:fill-strong-cyan"
+                        ><picture
+                            w="8 xl:12"
+                            h="8 xl:12"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg
+                                w="8 xl:12"
+                                viewBox="0 0 24 24"
+                                transition="colors"
+                            >
+                                <use href="#icon-facebook" />
+                            </svg> </picture
+                    ></a>
+                    <a
+                        href="https://www.twitter.com/"
+                        target="_blank"
+                        class="fill-dark-grayish-blue hover:fill-strong-cyan"
+                        ><picture
+                            w="8 xl:12"
+                            h="8 xl:12"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg viewBox="0 0 24 24" transition="colors">
+                                <use href="#icon-twitter" />
+                            </svg> </picture
+                    ></a>
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        class="fill-dark-grayish-blue hover:fill-strong-cyan"
+                    >
+                        <picture
+                            w="8 xl:12"
+                            h="8 xl:12"
+                            overflow="hidden"
+                            grid
+                            place="items-center"
+                        >
+                            <svg viewBox="0 0 24 24" transition="colors">
+                                <use href="#icon-instagram" />
+                            </svg> </picture
+                    ></a>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/main.js"></script>
+    </body>
+    <svg xmlns="http://www.w3.org/2000/svg" h="0" w="0" hidden>
+        <defs>
+            <g
+                id="logo"
+                stroke="#26BBA4"
+                stroke-width="10"
+                fill="none"
+                fill-rule="evenodd"
+            >
+                <title>Logo</title>
+                <circle cx="62.5" cy="62.5" r="57.5" />
+                <path
+                    d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
+                    stroke-linecap="round"
+                />
+            </g>
+
+            <g id="icon-blacklist" fill="#9EABB2" fill-rule="nonzero">
+                <title>Blacklist</title>
+                <path
+                    d="M11.07 0C8.353 0 6.14 2.192 6.14 4.876l-.179 25.278 2.69.02.179-25.289c0-1.21 1.005-2.196 2.24-2.196h27.027V0H11.071z"
+                />
+                <path
+                    d="M38.097 0a5.115 5.115 0 00-5.11 5.11v28.37c0 2.052-1.668 3.72-3.72 3.72a3.725 3.725 0 01-3.72-3.72V30.21c0-.743-.601-1.345-1.344-1.345H1.345C.602 28.864 0 29.466 0 30.21v3.272a6.417 6.417 0 006.41 6.409V37.2a3.724 3.724 0 01-3.72-3.72v-1.927h20.168v1.928a6.417 6.417 0 006.41 6.409 6.417 6.417 0 006.409-6.41V12.46h6.185c.743 0 1.345-.602 1.345-1.345V5.11A5.115 5.115 0 0038.097 0zm2.42 9.77h-4.84V5.11a2.423 2.423 0 012.42-2.42 2.423 2.423 0 012.42 2.42v4.66z"
+                />
+                <path
+                    d="M6.14 37.201h22.813v2.689H6.14zM19.99 7.485h-6.947a1.345 1.345 0 100 2.69h6.947a1.345 1.345 0 100-2.69zM28.057 12.863H13.043a1.345 1.345 0 100 2.69h15.014a1.345 1.345 0 100-2.69zM28.057 18.242H13.043a1.345 1.345 0 100 2.69h15.014a1.344 1.344 0 100-2.69zM28.057 23.62H13.043a1.345 1.345 0 100 2.69h15.014a1.345 1.345 0 100-2.69z"
+                />
+            </g>
+
+            <g id="icon-facebook">
+                <title>Facebook</title>
+                <path
+                    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                    fill-rule="nonzero"
+                />
+            </g>
+
+            <g id="icon-instagram">
+                <title>Instagram</title>
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                    fill-rule="nonzero"
+                />
+            </g>
+
+            <g id="icon-preview">
+                <title>Preview</title>
+                <path
+                    d="M49.059 14.072c-2.585-4.227-6.06-7.623-10.424-10.188C34.27 1.318 29.66.035 24.806.035c-4.854 0-9.464 1.283-13.829 3.849C6.612 6.449 3.137 9.845.554 14.072c-.37.646-.554 1.283-.554 1.91 0 .628.185 1.265.554 1.91 2.583 4.227 6.058 7.624 10.423 10.189 4.365 2.565 8.975 3.847 13.83 3.847 4.853 0 9.463-1.277 13.828-3.833 4.365-2.557 7.84-5.957 10.424-10.202.369-.646.553-1.283.553-1.91 0-.628-.184-1.265-.553-1.911zM18.867 6.5c1.652-1.652 3.631-2.478 5.939-2.478.369 0 .683.13.941.388.258.258.388.572.388.941 0 .37-.13.683-.387.941a1.28 1.28 0 01-.942.388c-1.587 0-2.944.563-4.07 1.689-1.126 1.126-1.688 2.482-1.688 4.07 0 .369-.13.683-.388.941a1.28 1.28 0 01-.941.388c-.37 0-.683-.13-.942-.388a1.282 1.282 0 01-.388-.942c0-2.306.827-4.286 2.478-5.938zm17.969 18.522c-3.701 2.242-7.71 3.364-12.03 3.364-4.319 0-8.329-1.121-12.03-3.364-3.7-2.243-6.777-5.256-9.232-9.04 2.805-4.356 6.321-7.614 10.548-9.773a12.099 12.099 0 00-1.689 6.23c0 3.414 1.214 6.334 3.64 8.762 2.428 2.427 5.349 3.64 8.763 3.64 3.415 0 6.335-1.213 8.762-3.64 2.428-2.427 3.641-5.348 3.641-8.763 0-2.233-.563-4.31-1.689-6.229 4.227 2.16 7.743 5.418 10.548 9.773-2.454 3.784-5.532 6.797-9.232 9.04z"
+                    fill="#9EABB2"
+                    fill-rule="nonzero"
+                />
+            </g>
+
+            <g id="icon-text">
+                <title>Text</title>
+                <path
+                    d="M17.872 14.736a235.39 235.39 0 012.192 5.744c.746 2.027 1.536 4.24 2.368 6.64h-5.344a44.4 44.4 0 00-.784-2.368c-.288-.81-.57-1.632-.848-2.432h-8.64c-.278.8-.56 1.621-.848 2.432a44.4 44.4 0 00-.784 2.368H0a371.54 371.54 0 012.368-6.644 233.104 233.104 0 012.192-5.748 206.71 206.71 0 012.112-5.112c.693-1.61 1.413-3.136 2.16-4.736H13.6c.725 1.6 1.44 3.125 2.144 4.736.704 1.61 1.413 3.328 2.128 5.12zM7.968 18.32h6.303c-.34-.96-.671-1.878-.991-2.752a94.407 94.407 0 00-.912-2.4c-.288-.725-.539-1.365-.752-1.92-.214-.555-.384-.992-.512-1.313-.107.32-.267.758-.48 1.313a1241.872 1241.872 0 00-1.648 4.32c-.331.874-.667 1.792-1.008 2.752zM35.04 3.2h-3.2v25.6h3.2V32h-9.6v-3.2h3.2V3.2h-3.2V0h9.6v3.2z"
+                    fill="#9EABB2"
+                    fill-rule="nonzero"
+                />
+            </g>
+
+            <g id="icon-twitter">
+                <title>Twitter</title>
+                <path
+                    d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
+                    fill-rule="nonzero"
+                />
+            </g>
+        </defs>
+    </svg>
 </html>
