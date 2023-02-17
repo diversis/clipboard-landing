@@ -46,17 +46,20 @@
                 gap="4 xl:10"
             >
                 <div>
-                    <picture>
+                    <div>
                         <svg
                             viewBox="0 0 125 125"
                             w="[clamp(1em,25vw,8em)]"
                             h="min"
                             grid
                             place="items-center"
+                            alt="Clipboard Logo"
+                            title="Clipboard Logo"
+                            role="img"
                         >
                             <use href="#logo" />
                         </svg>
-                    </picture>
+                    </div>
                 </div>
                 <div class="flex flex-col" gap="4" p="x-0 y-4">
                     <article class="flex flex-col" items="center">
@@ -82,11 +85,13 @@
                         class="flex flex-col xl:flex-row"
                         justify="center"
                         gap="4"
-                        m="xl:t-4"
+                        xl:m="t-4"
                     >
                         <button
                             class="btn hover:bg-strong-cyan-50"
                             bg="strong-cyan "
+                            name="Dowload for iOS"
+                            type="button"
                         >
                             Dowload for iOS
                         </button>
@@ -94,6 +99,8 @@
                         <button
                             class="btn hover:bg-light-blue-50"
                             bg="light-blue"
+                            name="Dowload for Mac"
+                            type="button"
                         >
                             Dowload for Mac
                         </button>
@@ -119,23 +126,36 @@
                     class="flex flex-col xl:grid xl:grid-cols-2"
                     m="x-auto xl:x-0"
                 >
-                    <div relative>
-                        <picture xl:absolute xl:left="-10%" overflow="crop">
-                            <img
-                                w="100% xl:110%"
+                    <div relative w="full">
+                        <picture
+                            xl:absolute
+                            xl:left="-10%"
+                            xl:right="0"
+                            overflow="crop"
+                        >
+                            <source
+                                w="100%"
                                 srcset="
-                                    /images/image-computer/150.webp   150w,
-                                    /images/image-computer/256.webp   256w,
-                                    /images/image-computer/375.webp   375w,
-                                    /images/image-computer/480.webp   480w,
-                                    /images/image-computer/640.webp   640w,
-                                    /images/image-computer/768.webp   768w,
-                                    /images/image-computer/1024.webp 1024w,
-                                    /images/image-computer/1200.webp 1200w,
-                                    /images/image-computer/1440.webp 1440w
+                                    /images/image-computer/150.webp 150w,
+                                    /images/image-computer/256.webp 256w,
+                                    /images/image-computer/375.webp 375w,
+                                    /images/image-computer/480.webp 480w,
+                                    /images/image-computer/640.webp 640w
                                 "
+                                sizes="(min-width: 1440px) 50vw, 100vw"
                                 src="/images/image-computer/1024.webp"
                                 alt="Image Computer"
+                                title="Image Computer"
+                                type="image/webp"
+                            />
+                            <img
+                                xl:w="full"
+                                alt="Image Computer"
+                                title="Image Computer"
+                                loading="lazy"
+                                src="/images/image-computer.png"
+                                width="752"
+                                height="572"
                             />
                         </picture>
                     </div>
@@ -190,20 +210,27 @@
                 <div grid items="center" m="x-auto xl:x-[10vw]">
                     <div relative>
                         <picture overflow="crop">
-                            <img
+                            <source
                                 srcset="
-                                    /images/image-devices/150.webp   150w,
-                                    /images/image-devices/256.webp   256w,
-                                    /images/image-devices/375.webp   375w,
-                                    /images/image-devices/480.webp   480w,
-                                    /images/image-devices/640.webp   640w,
-                                    /images/image-devices/768.webp   768w,
-                                    /images/image-devices/1024.webp 1024w,
-                                    /images/image-devices/1200.webp 1200w,
-                                    /images/image-devices/1440.webp 1440w
+                                    /images/image-devices/150.webp 150w,
+                                    /images/image-devices/256.webp 256w,
+                                    /images/image-devices/375.webp 375w,
+                                    /images/image-devices/480.webp 480w,
+                                    /images/image-devices/640.webp 640w,
+                                    /images/image-devices/768.webp 768w
                                 "
-                                src="/images/image-devices/1024.webp"
+                                sizes="(min-width: 1440px) 80vw, 90vw,"
                                 alt="Image devices"
+                                title="Image devices"
+                                type="image/webp"
+                            />
+                            <img
+                                alt="Image devices"
+                                title="Image devices"
+                                loading="lazy"
+                                src="/images/image-devices.png"
+                                width="905"
+                                height="575"
                             />
                         </picture>
                     </div>
@@ -238,17 +265,23 @@
                         justify="xl:self-center"
                         items="center"
                     >
-                        <picture
+                        <div
                             w="10 xl:16"
                             h="10 xl:16"
                             overflow="hidden"
                             grid
                             place="items-center"
                         >
-                            <svg w="10 xl:16" viewBox="0 0 43 40">
+                            <svg
+                                w="10 xl:16"
+                                viewBox="0 0 43 40"
+                                alt="Blacklist"
+                                title="Blacklist"
+                                role="img"
+                            >
                                 <use href="#icon-blacklist" w="full" h="full" />
                             </svg>
-                        </picture>
+                        </div>
                         <h3 leading="12" class="h3" p="t-4 xl:t-8">
                             Create blacklists
                         </h3>
@@ -264,17 +297,23 @@
                         justify="xl:self-center"
                         items="center"
                     >
-                        <picture
+                        <div
                             w="10 xl:16"
                             h="10 xl:16"
                             overflow="hidden"
                             grid
                             place="items-center"
                         >
-                            <svg w="10 xl:16" viewBox="0 0 35 32">
+                            <svg
+                                w="10 xl:16"
+                                viewBox="0 0 35 32"
+                                alt="Text"
+                                title="Text"
+                                role="img"
+                            >
                                 <use href="#icon-text" w="full" h="full" />
                             </svg>
-                        </picture>
+                        </div>
                         <h3 leading="12" class="h3" p="t-4 xl:t-8">
                             Plain text snippets
                         </h3>
@@ -290,17 +329,23 @@
                         justify="xl:self-center"
                         items="center"
                     >
-                        <picture
+                        <div
                             w="10 xl:16"
                             h="10 xl:16"
                             overflow="hidden"
                             grid
                             place="items-center"
                         >
-                            <svg w="10 xl:16" viewBox="0 0 50 32">
+                            <svg
+                                w="10 xl:16"
+                                viewBox="0 0 50 32"
+                                alt="Preview"
+                                title="Preview"
+                                role="img"
+                            >
                                 <use href="#icon-preview" m="auto" />
                             </svg>
-                        </picture>
+                        </div>
                         <h3 leading="12" class="h3" p="t-4 xl:t-8">
                             Sneak preview
                         </h3>
@@ -319,97 +364,107 @@
                 gap="10 xl:20"
                 justify="between"
                 p="xl:x-12 x-[clamp(2em,5vw,8em)] y-8 xl:y-0"
-                max="w-96"
+                max="w-96 xl:w-full"
+                w="3/4 xl:w-full"
                 m="x-auto"
             >
                 <picture>
-                    <img
-                        srcset="
-                            /images/logo-google/150.webp   150w,
-                            /images/logo-google/256.webp   256w,
-                            /images/logo-google/375.webp   375w,
-                            /images/logo-google/480.webp   480w,
-                            /images/logo-google/640.webp   640w,
-                            /images/logo-google/768.webp   768w,
-                            /images/logo-google/1024.webp 1024w,
-                            /images/logo-google/1200.webp 1200w,
-                            /images/logo-google/1440.webp 1440w
-                        "
-                        src="/images/logo-google/1024.webp"
+                    <source
+                        srcset="/images/logo-google/150.webp 150w"
                         alt="Google"
+                        title="Google"
+                        sizes="(min-width: 1440px) 20vw,75vw"
+                        type="image/webp"
+                    />
+                    <img
+                        alt="Google"
+                        title="Google"
+                        loading="lazy"
+                        src="/images/logo-google.png"
+                        width="480"
+                        height="143"
                     />
                 </picture>
                 <picture>
-                    <img
-                        srcset="
-                            /images/logo-ibm/150.webp   150w,
-                            /images/logo-ibm/256.webp   256w,
-                            /images/logo-ibm/375.webp   375w,
-                            /images/logo-ibm/480.webp   480w,
-                            /images/logo-ibm/640.webp   640w,
-                            /images/logo-ibm/768.webp   768w,
-                            /images/logo-ibm/1024.webp 1024w,
-                            /images/logo-ibm/1200.webp 1200w,
-                            /images/logo-ibm/1440.webp 1440w
-                        "
-                        src="/images/logo-ibm/1024.webp"
+                    <source
+                        srcset="/images/logo-ibm/150.webp 150w"
                         alt="IBM"
+                        title="IBM"
+                        sizes="(min-width: 1440px) 20vw,75vw"
+                        type="image/webp"
+                    />
+                    <img
+                        alt="IBM"
+                        title="IBM"
+                        loading="lazy"
+                        src="/images/logo-ibm.png"
+                        width="480"
+                        height="176"
                     />
                 </picture>
                 <picture>
-                    <img
-                        srcset="
-                            /images/logo-microsoft/150.webp   150w,
-                            /images/logo-microsoft/256.webp   256w,
-                            /images/logo-microsoft/375.webp   375w,
-                            /images/logo-microsoft/480.webp   480w,
-                            /images/logo-microsoft/640.webp   640w,
-                            /images/logo-microsoft/768.webp   768w,
-                            /images/logo-microsoft/1024.webp 1024w,
-                            /images/logo-microsoft/1200.webp 1200w,
-                            /images/logo-microsoft/1440.webp 1440w
-                        "
-                        src="/images/logo-microsoft/1024.webp"
+                    <source
+                        srcset="/images/logo-microsoft/150.webp 150w"
                         alt="Microsoft"
+                        title="Microsoft"
+                        sizes="(min-width: 1440px) 20vw,75vw"
+                        type="image/webp"
+                    />
+                    <img
+                        alt="Microsoft"
+                        title="Microsoft"
+                        loading="lazy"
+                        src="/images/logo-microsoft.png"
+                        width="480"
+                        height="104"
                     />
                 </picture>
                 <picture>
-                    <img
-                        srcset="
-                            /images/logo-hp/150.webp   150w,
-                            /images/logo-hp/256.webp   256w,
-                            /images/logo-hp/375.webp   375w,
-                            /images/logo-hp/480.webp   480w,
-                            /images/logo-hp/640.webp   640w,
-                            /images/logo-hp/768.webp   768w,
-                            /images/logo-hp/1024.webp 1024w,
-                            /images/logo-hp/1200.webp 1200w,
-                            /images/logo-hp/1440.webp 1440w
-                        "
-                        src="/images/logo-hp/1024.webp"
+                    <source
+                        srcset="/images/logo-hp/150.webp 150w"
+                        src="/images/logo-hp/480.webp"
                         alt="HP"
+                        title="HP"
+                        sizes="(min-width: 1440px) 20vw,75vw"
+                        type="image/webp"
+                    />
+                    <img
+                        alt="HP"
+                        title="HP"
+                        loading="lazy"
+                        src="/images/logo-hp.png"
+                        width="480"
+                        height="199"
                     />
                 </picture>
                 <picture>
-                    <img
-                        srcset="
-                            /images/logo-vector-graphics/150.webp   150w,
-                            /images/logo-vector-graphics/256.webp   256w,
-                            /images/logo-vector-graphics/375.webp   375w,
-                            /images/logo-vector-graphics/480.webp   480w,
-                            /images/logo-vector-graphics/640.webp   640w,
-                            /images/logo-vector-graphics/768.webp   768w,
-                            /images/logo-vector-graphics/1024.webp 1024w,
-                            /images/logo-vector-graphics/1200.webp 1200w,
-                            /images/logo-vector-graphics/1440.webp 1440w
-                        "
-                        src="/images/logo-vector-graphics/1024.webp"
+                    <source
+                        srcset="/images/logo-vector-graphics/150.webp 150w"
+                        src="/images/logo-vector-graphics/480.webp"
                         alt="Vector Graphics"
+                        title="Vector Graphics"
+                        sizes="(min-width: 1440px) 20vw,75vw"
+                        type="image/webp"
+                    />
+                    <img
+                        alt="Vector Graphics"
+                        title="Vector Graphics"
+                        loading="lazy"
+                        src="/images/logo-vector-graphics.png"
+                        width="480"
+                        height="115"
                     />
                 </picture>
             </div>
             <!-- Bottom  CTA-->
-            <div class="flex flex-col" gap="0 xl:4" p="x-0 y-4" w="full">
+            <div
+                class="flex flex-col"
+                gap="0 xl:4"
+                p="x-0 y-4"
+                w="full"
+                container
+                m="x-auto"
+            >
                 <article class="flex flex-col container mx-auto" items="center">
                     <h2 class="h2">Supercharge your workflow</h2>
                     <p
@@ -429,11 +484,18 @@
                     <button
                         class="btn hover:bg-strong-cyan-50"
                         bg="strong-cyan "
+                        name="Dowload for iOS"
+                        type="button"
                     >
                         Dowload for iOS
                     </button>
 
-                    <button class="btn hover:bg-light-blue-50" bg="light-blue">
+                    <button
+                        class="btn hover:bg-light-blue-50"
+                        bg="light-blue"
+                        name="Dowload for Mac"
+                        type="button"
+                    >
                         Dowload for Mac
                     </button>
                 </section>
@@ -447,18 +509,20 @@
                 p="x-2 xl:x-20"
                 place="items-center"
                 gap="8"
+                m="x-auto"
             >
                 <div>
-                    <picture>
-                        <svg
-                            w="12 "
-                            viewBox="0 0 125 125"
-                            grid
-                            place="items-center"
-                        >
-                            <use href="#logo" />
-                        </svg>
-                    </picture>
+                    <svg
+                        w="12 "
+                        viewBox="0 0 125 125"
+                        grid
+                        place="items-center"
+                        alt="Clipboard Logo"
+                        title="Clipboard Logo"
+                        role="img"
+                    >
+                        <use href="#logo" />
+                    </svg>
                 </div>
                 <div
                     grid
@@ -500,61 +564,74 @@
                         >
                     </div>
                 </div>
-                <div
-                    flex
-                    class="flex-col xl:flex-row"
-                    gap="4 xl:8"
-                    p="0 xl:x-20"
-                >
+                <div flex class="flex-row" gap="8" p="0 xl:x-20">
                     <a
                         href="https://www.facebook.com/"
                         target="_blank"
                         class="fill-dark-grayish-blue hover:fill-strong-cyan"
-                        ><picture
-                            w="8 xl:12"
-                            h="8 xl:12"
+                        title="Facebook"
+                        ><div
+                            w="6 xl:8"
+                            h="6 xl:8"
                             overflow="hidden"
                             grid
                             place="items-center"
+                            title="Facebook"
                         >
                             <svg
-                                w="8 xl:12"
                                 viewBox="0 0 24 24"
                                 transition="colors"
+                                alt="Facebook"
+                                title="Facebook"
+                                role="img"
                             >
                                 <use href="#icon-facebook" />
-                            </svg> </picture
+                            </svg></div
                     ></a>
                     <a
                         href="https://www.twitter.com/"
                         target="_blank"
                         class="fill-dark-grayish-blue hover:fill-strong-cyan"
-                        ><picture
-                            w="8 xl:12"
-                            h="8 xl:12"
+                        title="Twitter"
+                        ><div
+                            w="6 xl:8"
+                            h="6 xl:8"
                             overflow="hidden"
                             grid
                             place="items-center"
                         >
-                            <svg viewBox="0 0 24 24" transition="colors">
+                            <svg
+                                viewBox="0 0 24 24"
+                                transition="colors"
+                                alt="Twitter"
+                                title="Twitter"
+                                role="img"
+                            >
                                 <use href="#icon-twitter" />
-                            </svg> </picture
+                            </svg></div
                     ></a>
                     <a
                         href="https://www.instagram.com/"
                         target="_blank"
                         class="fill-dark-grayish-blue hover:fill-strong-cyan"
+                        title="Instagram"
                     >
-                        <picture
-                            w="8 xl:12"
-                            h="8 xl:12"
+                        <div
+                            w="6 xl:8"
+                            h="6 xl:8"
                             overflow="hidden"
                             grid
                             place="items-center"
                         >
-                            <svg viewBox="0 0 24 24" transition="colors">
+                            <svg
+                                viewBox="0 0 24 24"
+                                transition="colors"
+                                alt="Instagram"
+                                title="Instagram"
+                                role="img"
+                            >
                                 <use href="#icon-instagram" />
-                            </svg> </picture
+                            </svg></div
                     ></a>
                 </div>
             </div>
@@ -570,7 +647,7 @@
                 fill="none"
                 fill-rule="evenodd"
             >
-                <title>Logo</title>
+                <title>Clipboard Logo</title>
                 <circle cx="62.5" cy="62.5" r="57.5" />
                 <path
                     d="M85.481 85.481c-12.692 12.692-33.27 12.692-45.962 0s-12.692-33.27 0-45.962 33.27-12.692 45.962 0"
