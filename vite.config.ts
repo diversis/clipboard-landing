@@ -43,7 +43,7 @@ export default {
                 breakpoints: {
                     sm: "375px",
                     md: "768px",
-                    xl: "1440px",
+                    xl: "1200px",
                 },
                 text: {
                     sm: "0.9rem",
