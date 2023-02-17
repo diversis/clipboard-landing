@@ -6,7 +6,8 @@ export default {
         UnoCSS({
             presets: [
                 presetAttributify({
-                    /* preset options */
+                    prefix: "un-",
+                    prefixedOnly: true,
                 }),
                 presetUno(),
                 presetWebFonts({

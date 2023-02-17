@@ -6,53 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Clipboard Landing Page</title>
     </head>
-    <body w="screen" min="h-screen">
+    <body un-w="screen" un-min="h-screen">
         <a
             href="#content"
             class="-translate-y-full focus:translate-y-0 transition-transform"
-            text="lg xl:xl black"
-            absolute
-            top="0"
-            left="0"
-            p="x-8 y-2"
-            z="[9000]"
+            un-text="lg xl:xl black"
+            un-absolute
+            un-top="0"
+            un-left="0"
+            un-p="x-8 y-2"
+            un-z="[9000]"
         >
             Skip to content
         </a>
-        <header h="6em xl:8em" relative overflow="visible">
+        <header un-h="6em xl:8em" un-relative un-overflow="visible">
             <div
                 class="bg-header"
-                absolute
-                h="8em xl:[clamp(10em,25vh,25em)]"
-                w="100vw"
-                z="-10"
+                un-absolute
+                un-h="8em xl:[clamp(10em,25vh,25em)]"
+                un-w="100vw"
+                un-z="-10"
             ></div>
         </header>
         <div id="app"></div>
         <main
             id="content"
             class="grid grid-cols-1"
-            gap="20 xl:30"
-            p="x-6 xl:x-8 b-20 xl:b-40"
+            un-gap="20 xl:30"
+            un-p="x-6 xl:x-8 b-20 xl:b-40"
         >
             <!-- Hero section -->
             <div
-                h="full"
-                class="flex flex-col container"
-                m="x-auto"
-                items="center"
-                w="full"
-                items="center"
-                gap="4 xl:10"
+                un-h="full"
+                class="flex flex-col"
+                un-container
+                un-m="x-auto"
+                un-items="center"
+                un-w="full"
+                un-items="center"
+                un-gap="4 xl:10"
             >
                 <div>
                     <div>
                         <svg
                             viewBox="0 0 125 125"
-                            w="[clamp(1em,25vw,8em)]"
-                            h="min"
-                            grid
-                            place="items-center"
+                            un-w="[clamp(1em,25vw,8em)]"
+                            un-h="min"
+                            un-grid
+                            un-place="items-center"
                             alt="Clipboard Logo"
                             title="Clipboard Logo"
                             role="img"
@@ -61,19 +62,19 @@
                         </svg>
                     </div>
                 </div>
-                <div class="flex flex-col" gap="4" p="x-0 y-4">
+                <div class="flex flex-col" un-gap="4" un-p="x-0 y-4">
                     <article class="flex flex-col" items="center">
                         <h1
-                            text="3xl xl:6xl center dark-grayish-blue"
-                            font="semibold"
-                            p="b-8"
+                            un-text="3xl xl:6xl center dark-grayish-blue"
+                            un-font="semibold"
+                            un-p="b-8"
                         >
                             A history of everything you copy
                         </h1>
                         <p
-                            text="xl:2xl xl center grayish-blue"
-                            p="b-8"
-                            max="w-[52ch]"
+                            un-text="xl:2xl xl center grayish-blue"
+                            un-p="b-8"
+                            un-max="w-[52ch]"
                         >
                             Clipboard allows you to track and organize
                             everything you copy. Instantly access your clipboard
@@ -83,13 +84,13 @@
                     <!-- CTA -->
                     <section
                         class="flex flex-col xl:flex-row"
-                        justify="center"
-                        gap="4"
-                        xl:m="t-4"
+                        un-justify="center"
+                        un-gap="4"
+                        un-xl:m="t-4"
                     >
                         <button
                             class="btn hover:bg-strong-cyan-50"
-                            bg="strong-cyan "
+                            un-bg="strong-cyan "
                             name="Dowload for iOS"
                             type="button"
                         >
@@ -98,7 +99,7 @@
 
                         <button
                             class="btn hover:bg-light-blue-50"
-                            bg="light-blue"
+                            un-bg="light-blue"
                             name="Dowload for Mac"
                             type="button"
                         >
@@ -108,13 +109,17 @@
                 </div>
             </div>
             <!-- Desktop -->
-            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4">
-                <article class="flex flex-col container mx-auto" items="center">
+            <div class="flex flex-col" un-gap="10 xl:20" un-p="x-0 y-4">
+                <article
+                    class="flex flex-col mx-auto"
+                    un-container
+                    un-items="center"
+                >
                     <h2 class="h2">Keep track of your snippets</h2>
                     <p
-                        text="lg xl:xl center grayish-blue"
-                        p="b-8"
-                        max="w-[62ch]"
+                        un-text="lg xl:xl center grayish-blue"
+                        un-p="b-8"
+                        un-max="w-[62ch]"
                     >
                         Clipboard instantly stores any item you copy in the
                         cloud, meaning you can access your snippets immediately
@@ -124,17 +129,17 @@
                 </article>
                 <div
                     class="flex flex-col xl:grid xl:grid-cols-2"
-                    m="x-auto xl:x-0"
+                    un-m="x-auto xl:x-0"
                 >
-                    <div relative w="full">
+                    <div un-relative un-w="full">
                         <picture
-                            xl:absolute
-                            xl:left="-10%"
-                            xl:right="0"
-                            overflow="crop"
+                            un-xl:absolute
+                            un-xl:left="-10%"
+                            un-xl:right="0"
+                            un-overflow="crop"
                         >
                             <source
-                                w="100%"
+                                un-w="100%"
                                 srcset="
                                     /images/image-computer/150.webp 150w,
                                     /images/image-computer/256.webp 256w,
@@ -149,7 +154,7 @@
                                 type="image/webp"
                             />
                             <img
-                                xl:w="full"
+                                un-xl:w="full"
                                 alt="Image Computer"
                                 title="Image Computer"
                                 loading="lazy"
@@ -159,17 +164,17 @@
                             />
                         </picture>
                     </div>
-                    <div p="t-20 xl:l-30 xl:y-20" m="x-auto xl:0">
+                    <div un-p="t-20 xl:l-30 xl:y-20" un-m="x-auto xl:0">
                         <ul
                             class="flex flex-col"
-                            gap="8 xl:15"
-                            leading="8"
-                            max="w-[38ch]"
-                            text="center xl:left"
+                            un-gap="8 xl:15"
+                            un-leading="8"
+                            un-max="w-[38ch]"
+                            un-text="center xl:left"
                         >
                             <li>
                                 <h3 class="h3">Quick Search</h3>
-                                <span text="grayish-blue  base xl:lg"
+                                <span un-text="grayish-blue  base xl:lg"
                                     >Easily search your snippets by content,
                                     category, web address, application and
                                     more</span
@@ -177,14 +182,14 @@
                             </li>
                             <li>
                                 <h3 class="h3">iCloud Sync</h3>
-                                <span text="grayish-blue  base xl:lg"
+                                <span un-text="grayish-blue  base xl:lg"
                                     >Instantly saves and syncs snippets across
                                     all your devices</span
                                 >
                             </li>
                             <li>
                                 <h3 class="h3">Complete History</h3>
-                                <span text="grayish-blue  base xl:lg"
+                                <span un-text="grayish-blue  base xl:lg"
                                     >Retrieve any snippets from the frist moment
                                     you started using the app</span
                                 >
@@ -194,22 +199,26 @@
                 </div>
             </div>
             <!-- Compatibility -->
-            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4">
-                <article class="flex flex-col container mx-auto" items="center">
+            <div class="flex flex-col" un-gap="10 xl:20" un-p="x-0 y-4">
+                <article
+                    class="flex flex-col mx-auto"
+                    un-container
+                    un-items="center"
+                >
                     <h2 class="h2">Access Clipboard Anywhere</h2>
                     <p
-                        text="lg xl:xl center grayish-blue"
-                        p="b-8"
-                        max="w-[62ch]"
+                        un-text="lg xl:xl center grayish-blue"
+                        un-p="b-8"
+                        un-max="w-[62ch]"
                     >
                         Whether you're on the go, or at your computer, you can
                         access all your Clipboard snippets in a few simple
                         clicks
                     </p>
                 </article>
-                <div grid items="center" m="x-auto xl:x-[10vw]">
-                    <div relative>
-                        <picture overflow="crop">
+                <div un-grid un-items="center" un-m="x-auto xl:x-[10vw]">
+                    <div un-relative>
+                        <picture un-overflow="crop">
                             <source
                                 srcset="
                                     /images/image-devices/150.webp 150w,
@@ -237,119 +246,129 @@
                 </div>
             </div>
             <!-- Features -->
-            <div class="flex flex-col" gap="10 xl:20" p="x-0 y-4" w="full">
-                <article class="flex flex-col container mx-auto" items="center">
+            <div
+                class="flex flex-col"
+                un-gap="10 xl:20"
+                un-p="x-0 y-4"
+                un-w="full"
+            >
+                <article
+                    class="flex flex-col mx-auto"
+                    un-container
+                    un-items="center"
+                >
                     <h2 class="h2">Supercharge your workflow</h2>
                     <p
-                        text="lg xl:xl center grayish-blue"
-                        p="b-8"
-                        max="w-[62ch]"
+                        un-text="lg xl:xl center grayish-blue"
+                        un-p="b-8"
+                        un-max="w-[62ch]"
                     >
                         We've got the tools to boost your productivity
                     </p>
                 </article>
                 <div
-                    class="flex flex-col xl:grid xl:grid-cols-3 container"
-                    gap="8 xl:15"
-                    leading="8"
-                    text="center"
-                    m="x-auto"
-                    justify="center"
-                    items="start"
-                    place="content-center"
+                    class="flex flex-col xl:grid xl:grid-cols-3"
+                    un-container
+                    un-gap="8 xl:15"
+                    un-leading="8"
+                    un-text="center"
+                    un-m="x-auto"
+                    un-justify="center"
+                    un-items="start"
+                    un-place="content-center"
                 >
                     <div
-                        flex
+                        un-flex
                         class="flex-col"
-                        max="w-[38ch]"
-                        justify="xl:self-center"
-                        items="center"
+                        un-max="w-[38ch]"
+                        un-justify="xl:self-center"
+                        un-items="center"
                     >
                         <div
-                            w="10 xl:16"
-                            h="10 xl:16"
-                            overflow="hidden"
-                            grid
-                            place="items-center"
+                            un-w="10 xl:16"
+                            un-h="10 xl:16"
+                            un-overflow="hidden"
+                            un-grid
+                            un-place="items-center"
                         >
                             <svg
-                                w="10 xl:16"
+                                un-w="10 xl:16"
                                 viewBox="0 0 44 40"
                                 alt="Blacklist"
                                 title="Blacklist"
                                 role="img"
                             >
-                                <use href="#icon-blacklist" w="full" h="full" />
+                                <use href="#icon-blacklist" />
                             </svg>
                         </div>
-                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                        <h3 un-leading="12" class="h3" un-p="t-4 xl:t-8">
                             Create blacklists
                         </h3>
-                        <p text="grayish-blue  lg">
+                        <p un-text="grayish-blue  lg">
                             Ensure sensitive information never makes its way to
                             your clipboard by excluding certain sources
                         </p>
                     </div>
                     <div
-                        flex
+                        un-flex
                         class="flex-col"
-                        max="w-[38ch]"
-                        justify="xl:self-center"
-                        items="center"
+                        un-max="w-[38ch]"
+                        un-justify="xl:self-center"
+                        un-items="center"
                     >
                         <div
-                            w="10 xl:16"
-                            h="10 xl:16"
-                            overflow="hidden"
-                            grid
-                            place="items-center"
+                            un-w="10 xl:16"
+                            un-h="10 xl:16"
+                            un-overflow="hidden"
+                            un-grid
+                            un-place="items-center"
                         >
                             <svg
-                                w="10 xl:16"
+                                un-w="10 xl:16"
                                 viewBox="0 0 36 32"
                                 alt="Text"
                                 title="Text"
                                 role="img"
                             >
-                                <use href="#icon-text" w="full" h="full" />
+                                <use href="#icon-text" />
                             </svg>
                         </div>
-                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                        <h3 un-leading="12" class="h3" un-p="t-4 xl:t-8">
                             Plain text snippets
                         </h3>
-                        <p text="grayish-blue  lg">
+                        <p un-text="grayish-blue  lg">
                             Remove unwanted formatting from copied text for a
                             consistent look
                         </p>
                     </div>
                     <div
-                        flex
+                        un-flex
                         class="flex-col"
-                        max="w-[38ch]"
-                        justify="xl:self-center"
-                        items="center"
+                        un-max="w-[38ch]"
+                        un-justify="xl:self-center"
+                        un-items="center"
                     >
                         <div
-                            w="10 xl:16"
-                            h="10 xl:16"
-                            overflow="hidden"
-                            grid
-                            place="items-center"
+                            un-w="10 xl:16"
+                            un-h="10 xl:16"
+                            un-overflow="hidden"
+                            un-grid
+                            un-place="items-center"
                         >
                             <svg
-                                w="10 xl:16"
+                                un-w="10 xl:16"
                                 viewBox="0 0 50 32"
                                 alt="Preview"
                                 title="Preview"
                                 role="img"
                             >
-                                <use href="#icon-preview" m="auto" />
+                                <use href="#icon-preview" />
                             </svg>
                         </div>
-                        <h3 leading="12" class="h3" p="t-4 xl:t-8">
+                        <h3 un-leading="12" class="h3" un-p="t-4 xl:t-8">
                             Sneak preview
                         </h3>
-                        <p text="grayish-blue  lg">
+                        <p un-text="grayish-blue  lg">
                             Quick preview of all snippets on your Clipboard for
                             easy access
                         </p>
@@ -359,16 +378,16 @@
 
             <!-- Companies -->
             <div
-                flex
+                un-flex
                 class="flex-col xl:flex-row"
-                gap="10 xl:12"
-                justify="between"
-                p="xl:x-[clamp(1rem,5vw+2rem,10rem)] x-[clamp(2em,5vw,8em)] y-8 xl:y-0"
-                max="w-96 xl:w-full"
-                w="3/4 xl:full"
-                m="x-auto"
+                un-gap="10 xl:12"
+                un-justify="between"
+                un-p="xl:x-[clamp(1rem,5vw+2rem,10rem)] x-[clamp(2em,5vw,8em)] y-8 xl:y-0"
+                un-max="w-96 xl:w-full"
+                un-w="3/4 xl:full"
+                un-m="x-auto"
             >
-                <picture w="full">
+                <picture un-w="full">
                     <source
                         srcset="/images/logo-google/150.webp 150w"
                         alt="Google"
@@ -385,7 +404,7 @@
                         height="143"
                     />
                 </picture>
-                <picture w="full">
+                <picture un-w="full">
                     <source
                         srcset="/images/logo-ibm/150.webp 150w"
                         alt="IBM"
@@ -402,7 +421,7 @@
                         height="176"
                     />
                 </picture>
-                <picture w="full">
+                <picture un-w="full">
                     <source
                         srcset="/images/logo-microsoft/150.webp 150w"
                         alt="Microsoft"
@@ -419,7 +438,7 @@
                         height="104"
                     />
                 </picture>
-                <picture w="full">
+                <picture un-w="full">
                     <source
                         srcset="/images/logo-hp/150.webp 150w"
                         src="/images/logo-hp/480.webp"
@@ -437,7 +456,7 @@
                         height="199"
                     />
                 </picture>
-                <picture w="full">
+                <picture un-w="full">
                     <source
                         srcset="/images/logo-vector-graphics/150.webp 150w"
                         src="/images/logo-vector-graphics/480.webp"
@@ -459,31 +478,35 @@
             <!-- Bottom  CTA-->
             <div
                 class="flex flex-col"
-                gap="0 xl:4"
-                p="x-0 y-4"
-                w="full"
-                container
-                m="x-auto"
+                un-gap="0 xl:4"
+                un-p="x-0 y-4"
+                un-w="full"
+                un-container
+                un-m="x-auto"
             >
-                <article class="flex flex-col container mx-auto" items="center">
+                <article
+                    un-container
+                    class="flex flex-col mx-auto"
+                    un-items="center"
+                >
                     <h2 class="h2">Supercharge your workflow</h2>
                     <p
-                        text="lg xl:xl center grayish-blue"
-                        p="b-8"
-                        max="w-[62ch]"
+                        un-text="lg xl:xl center grayish-blue"
+                        un-p="b-8"
+                        un-max="w-[62ch]"
                     >
                         We've got the tools to boost your productivity
                     </p>
                 </article>
                 <section
                     class="flex flex-col xl:flex-row"
-                    justify="center"
-                    gap="4"
-                    m="xl:t-4"
+                    un-justify="center"
+                    un-gap="4"
+                    un-m="xl:t-4"
                 >
                     <button
                         class="btn hover:bg-strong-cyan-50"
-                        bg="strong-cyan "
+                        un-bg="strong-cyan "
                         name="Dowload for iOS"
                         type="button"
                     >
@@ -492,7 +515,7 @@
 
                     <button
                         class="btn hover:bg-light-blue-50"
-                        bg="light-blue"
+                        un-bg="light-blue"
                         name="Dowload for Mac"
                         type="button"
                     >
@@ -501,22 +524,21 @@
                 </section>
             </div>
         </main>
-        <footer w="full" p="y-4 xl:y-8">
+        <footer un-w="full" un-p="y-4 xl:y-8">
             <div
-                flex
-                class="flex-col xl:flex-row container"
-                justify="between"
-                p="x-2 xl:x-20"
-                place="items-center"
-                gap="8"
-                m="x-auto"
+                un-flex
+                un-container
+                class="flex-col xl:flex-row"
+                un-justify="between"
+                un-p="x-2 xl:x-20"
+                un-place="items-center"
+                un-gap="8"
+                un-m="x-auto"
             >
                 <div>
                     <svg
-                        w="12 "
+                        un-w="12 "
                         viewBox="0 0 125 125"
-                        grid
-                        place="items-center"
                         alt="Clipboard Logo"
                         title="Clipboard Logo"
                         role="img"
@@ -525,62 +547,62 @@
                     </svg>
                 </div>
                 <div
-                    grid
+                    un-grid
                     class="grid-cols-1 xl:grid-cols-3 xl:flex-grow"
-                    gap="8"
-                    p="xl:x-12"
+                    un-gap="8"
+                    un-p="xl:x-12"
                 >
-                    <div flex class="flex-col" gap="8">
+                    <div un-flex class="flex-col" un-gap="8">
                         <a
                             href="#"
-                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            un-text="dark-grayish-blue hover:strong-cyan base xl:lg"
                             >FAQs</a
                         >
 
                         <a
                             href="#"
-                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            un-text="dark-grayish-blue hover:strong-cyan base xl:lg"
                             >Contact Us</a
                         >
                     </div>
-                    <div flex class="flex-col" gap="8">
+                    <div un-flex class="flex-col" un-gap="8">
                         <a
                             href="#"
-                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            un-text="dark-grayish-blue hover:strong-cyan base xl:lg"
                             >Privacy Policy</a
                         >
 
                         <a
                             href="#"
-                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            un-text="dark-grayish-blue hover:strong-cyan base xl:lg"
                             >Press Kit</a
                         >
                     </div>
-                    <div flex class="flex-col" gap="8">
+                    <div un-flex class="flex-col" un-gap="8">
                         <a
                             href="#"
-                            text="dark-grayish-blue hover:strong-cyan base xl:lg"
+                            un-text="dark-grayish-blue hover:strong-cyan base xl:lg"
                             >Install Guide</a
                         >
                     </div>
                 </div>
-                <div flex class="flex-row" gap="8" p="0 xl:x-20">
+                <div un-flex class="flex-row" un-gap="8" un-p="0 xl:x-20">
                     <a
                         href="https://www.facebook.com/"
                         target="_blank"
                         class="fill-dark-grayish-blue hover:fill-strong-cyan"
                         title="Facebook"
                         ><div
-                            w="6 xl:8"
-                            h="6 xl:8"
-                            overflow="hidden"
-                            grid
-                            place="items-center"
+                            un-w="6 xl:8"
+                            un-h="6 xl:8"
+                            un-overflow="hidden"
+                            un-grid
+                            un-place="items-center"
                             title="Facebook"
                         >
                             <svg
                                 viewBox="0 0 24 24"
-                                transition="colors"
+                                un-transition="colors"
                                 alt="Facebook"
                                 title="Facebook"
                                 role="img"
@@ -594,15 +616,15 @@
                         class="fill-dark-grayish-blue hover:fill-strong-cyan"
                         title="Twitter"
                         ><div
-                            w="6 xl:8"
-                            h="6 xl:8"
-                            overflow="hidden"
-                            grid
-                            place="items-center"
+                            un-w="6 xl:8"
+                            un-h="6 xl:8"
+                            un-overflow="hidden"
+                            un-grid
+                            un-place="items-center"
                         >
                             <svg
                                 viewBox="0 0 24 20"
-                                transition="colors"
+                                un-transition="colors"
                                 alt="Twitter"
                                 title="Twitter"
                                 role="img"
@@ -617,15 +639,15 @@
                         title="Instagram"
                     >
                         <div
-                            w="6 xl:8"
-                            h="6 xl:8"
-                            overflow="hidden"
+                            un-w="6 xl:8"
+                            un-h="6 xl:8"
+                            un-overflow="hidden"
                             grid
-                            place="items-center"
+                            un-place="items-center"
                         >
                             <svg
                                 viewBox="0 0 24 24"
-                                transition="colors"
+                                un-transition="colors"
                                 alt="Instagram"
                                 title="Instagram"
                                 role="img"
@@ -638,7 +660,7 @@
         </footer>
         <script type="module" src="/main.js"></script>
     </body>
-    <svg xmlns="http://www.w3.org/2000/svg" h="0" w="0" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" un-h="0" un-w="0" hidden>
         <defs>
             <g
                 id="logo"
